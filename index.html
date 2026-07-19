@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.container{
+    width:90%;
+    max-width:420px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.7;
+    font-size:17px;
+}
+
+button{
+    margin-top:25px;
+    padding:14px 30px;
+    border:none;
+    border-radius:40px;
+    background:white;
+    color:#ff4f81;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.heart{
+    position:absolute;
+    color:#fff;
+    animation:love 8s linear infinite;
+    opacity:.8;
+}
+
+@keyframes love{
+    from{
+        transform:translateY(100vh) scale(.5);
+        opacity:0;
+    }
+    to{
+        transform:translateY(-100px) scale(1.5);
+        opacity:1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>❤️</h1>
+    <h2>Untuk Cewek Imut Cantik Baik</h2>
+
+    <p>
+        Hai Dindin...
+        <br><br>
+        Ana tau kamu lagi nd mood karna kamu pe argentina so pulang cuman ana m bilang ini cmn permainan jadi jangan buatkan kamu pe diri saki karna cmn permaianan bola ini yaaan
+        <br><br>
+        <b>I LOVE YOU ❤️</b>
+        <br><br>
+        Semoga kamu besik dpe mood somo baik ulang dari (rasya_stvn)
+    </p>
+
+    <button onclick="love()">Klik Aku ❤️</button>
+</div>
+
+<script>
+
+function love(){
+    alert("Aku Sayang Kamu Selamanya ❤️🥰");
+
+    for(let i=0;i<40;i++){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+        heart.innerHTML="❤️";
+
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.fontSize=(20+Math.random()*40)+"px";
+        heart.style.animationDuration=(4+Math.random()*5)+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },8000);
+    }
+}
+
+</script>
+
+</body>
+</html>
